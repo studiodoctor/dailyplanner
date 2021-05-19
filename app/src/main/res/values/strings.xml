@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Daily Planner</string>
+    <string name="title_activity_with_fragment">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string
+        name="messageWithLink"><a href="https://www.google.com/">Go to Registration</a></string>
+    <string name="title_notifications">Notifications</string>
+</resources>

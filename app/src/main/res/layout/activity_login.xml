@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/pic"
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:id="@+id/img_from_internet"
+        android:layout_width="300dp"
+        android:scaleType="fitXY"
+        android:layout_height="150dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/daily_planner" />
+
+    <EditText
+        android:id="@+id/email_id"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="Email Id"
+        android:inputType="textPersonName"
+        android:textSize="11dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/lgn_password"
+        android:layout_width="306dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:textSize="11dp"
+        />
+    <TextView
+        android:id="@+id/txt_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:text="Forgot password?"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="175dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/pink"
+        android:text="Login"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_lnk_to_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/pink"
+        android:text="@string/messageWithLink" />
+
+</LinearLayout>
+

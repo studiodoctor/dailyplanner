@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/pic"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/reg_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30dp"
+        android:layout_marginBottom="@android:dimen/notification_large_icon_height"/>
+
+    <TextView
+        android:id="@+id/reg_cellNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30dp"
+        android:layout_marginBottom="@android:dimen/notification_large_icon_height"/>
+
+    <TextView
+        android:id="@+id/reg_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="30dp" />
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/pic"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/reg_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:textSize="11dp"/>
+
+    <EditText
+        android:id="@+id/reg_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="SurName"
+        android:textSize="11dp"/>
+
+    <EditText
+        android:id="@+id/reg_cellNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Cell Number"
+        android:textSize="11dp"/>
+
+    <EditText
+        android:id="@+id/reg_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email Address"
+        android:textSize="11dp"/>
+
+    <EditText
+        android:id="@+id/reg_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Password"
+        android:textSize="11dp"/>
+
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="120dp"
+        android:layout_height="58dp"
+        android:text="Register"
+        android:textSize="11dp"
+        android:backgroundTint="@color/pink"
+        />
+
+</LinearLayout>
