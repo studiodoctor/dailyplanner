@@ -9,6 +9,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -71,6 +72,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private void init () {
 
+        getRunTimePermission();
+
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -82,24 +85,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         btn_login=findViewById(R.id.btn_login);
         btn_lnk_to_reg=findViewById(R.id.btn_lnk_to_reg);
         txt_forgot_password=findViewById(R.id.txt_forgot_password);
-
-        getRunTimePermission();
     }
 
 
-
-    private void validateFields() {
-        if (inputEmail.getText().toString().trim().equals("")) {
-            inputEmail.setError("Please enter your email address..");
-        } else if (inputPasswd.getText().toString().trim().equals("")) {
-            inputPasswd.setError("Please enter your password...");
-        }
-        else {
-            openSecondActivity();
-        }
-    }
 
     private void getRunTimePermission () {
+
         Dexter.withContext(this)
                 .withPermissions(
                         Manifest.permission.CAMERA,
@@ -112,6 +103,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onPermissionsChecked(MultiplePermissionsReport report)
             {
+
                 activateTheGPS();
             }
 
@@ -126,6 +118,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private void activateTheGPS() {
         if (googleApiClient == null) {
+
             googleApiClient = new GoogleApiClient.Builder(this)
                     .addApi(LocationServices.API)
                     .addConnectionCallbacks(this)
@@ -203,13 +196,17 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private void setListeners() {
 
+        txt_forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+            }
+        });
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
                 validate();
-                //validateFields();
-
             }
         });
 

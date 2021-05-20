@@ -9,6 +9,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_registration);
 
         init();
@@ -82,10 +84,8 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
       R_password=findViewById(R.id.reg_password);
       B_reg=findViewById(R.id.btn_reg);
 
-
       getRunTimePermission();
     }
-
 
     private void validateFields() {
         if (R_name.getText().toString().trim().equals("")) {
@@ -103,8 +103,20 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
         }
         else {
             registerUser(R_address.getText().toString().trim(), R_password.getText().toString().trim());
+           
             openSecondActivity();
         }
+    }
+
+    private void setListeners() {
+
+        B_reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                validateFields();
+            }
+        });
     }
 
     private void getRunTimePermission () {
@@ -207,17 +219,6 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                 }
             });
         }
-    }
-
-    private void setListeners() {
-
-        B_reg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                validateFields();
-            }
-        });
     }
 
     private void registerUser(String email, String password) {

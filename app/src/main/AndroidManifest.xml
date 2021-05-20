@@ -31,6 +31,10 @@
             android:name=".activities.SecondActivity"
             android:label="Second Activity">
         </activity>
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:label="Forgot Password Activity">
+        </activity>
         <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
